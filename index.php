@@ -1,4 +1,6 @@
 <?php
+include("modele/pdoConnect");
+
 if(!isset($_REQUEST['action']))
     $action = 'accueil';
 else
@@ -10,12 +12,20 @@ include("vues/v_entete.php") ;
 switch($action)
 {
     case 'accueil':
-	  // vue qui crée le contenu de la page d’accueil
         include("vues/v_accueil.php");
         break;
+    
     case 'catalogue':
+        include("vues/v_catalogue.php");
         break;
+    
     case 'reservation':
+        include("vues/v_reservation.php");
+        break;
+    
+    case 'voirVols' :
+        $lesVols = getLesVols();
+        include("vues/v_vols.php");
         break;
 }
 
