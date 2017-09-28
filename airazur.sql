@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 28 Septembre 2017 à 08:54
+-- Généré le :  Jeu 28 Septembre 2017 à 09:02
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -51,6 +51,14 @@ CREATE TABLE `reserver` (
   `idutil` int(11) NOT NULL,
   `nbplace` int(3) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `reserver`
+--
+
+INSERT INTO `reserver` (`idvol`, `idutil`, `nbplace`) VALUES
+('AIR5007', 1, 1),
+('AIR5108', 2, 7);
 
 -- --------------------------------------------------------
 
