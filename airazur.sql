@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 28 Septembre 2017 à 09:02
+-- Généré le :  Jeu 05 Octobre 2017 à 13:41
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -57,8 +57,8 @@ CREATE TABLE `reserver` (
 --
 
 INSERT INTO `reserver` (`idvol`, `idutil`, `nbplace`) VALUES
-('AIR5007', 1, 1),
-('AIR5108', 2, 7);
+('1', 1, 3),
+('2', 2, 7);
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,7 @@ INSERT INTO `utilisateur` (`numutil`, `nom`, `prenom`, `email`, `datenaiss`, `ad
 --
 
 CREATE TABLE `vol` (
-  `numvol` varchar(7) NOT NULL,
+  `numvol` varchar(15) NOT NULL,
   `depart` varchar(30) DEFAULT NULL,
   `arrivee` varchar(30) DEFAULT NULL,
   `datedepart` varchar(30) DEFAULT NULL,
