@@ -90,7 +90,7 @@ function getLesReservations() {
     include 'pdoConnect.php';
 
     try {
-        $rep = $bdd->prepare('SELECT * FROM vol');
+        $rep = $bdd->prepare('SELECT * FROM ');
         $rep->execute(); 
         while ($donnees = $rep->fetch(PDO::FETCH_ASSOC)) {
             $lesReserv[$r] = array(
@@ -104,23 +104,10 @@ function getLesReservations() {
             $donnees['prix']);
         $r++;
     }
-} catch (Exception $e) {
-    die ('Erreur :' . $e ->getMessage());
-}
- // Remplissage du tableau multi-dimensionnel $vols avec chacun des vols
+    } catch (Exception $e) {
+        die ('Erreur :' . $e ->getMessage());
+    }
     array_push($reserv, $lesReserv);
 
-// Retourner le tableau
-
-return $reserv;
-}
-
-function download($pdf) {
-    require('fpdf/fpdf.php');
-    
-    $dlnum = new FPDF();
-    $dlnum->AddPage();
-    $dlnum->SetFont('Arial','',12);
-    $dlnum->SetTextColor(74,74,74);
-    $dlnum->Output('F','fpdf/'.$pdf.'.pdf');
+    return $reserv;
 }
