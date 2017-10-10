@@ -1,22 +1,23 @@
+
+
 <html>
-    <table>
+    <table id ='reservations'>
         <tr>
             <th>Nom</th>
             <th>Prénom</th>
-            <th>Numéro de vol</td>h
+            <th>Numéro de vol</td>
             <th>Nombre de places</th>
             <th>PDF</th>
-        </tr>
+        </tr> 
         <?php
-            foreach($LesRevervations as $i =>$unRev) {
-
+            foreach($lesReservations[0] as $i =>$unRes) {
                echo"
                 <tr>
-                    <td>$unRev[0]</td>
-                    <td>$unRev[1]</td>
-                    <td>$unRev[2]</td>
-                    <td>$unRev[3]</td>
-                    <td><a href='index.php'><img src='image/pdf.png'/></a></td>
+                    <td>$unRes[0]</td>
+                    <td>$unRes[1]</td>
+                    <td>$unRes[2]</td>
+                    <td>$unRes[3]</td>
+                    <td><a href='index.php'><img style='heigth : 25px; width : 25px;' src='images/pdf.png'/></a></td>
                 </tr>";
             }
         ?>
