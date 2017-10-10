@@ -1,6 +1,4 @@
 <?php
-include("modele/pdoConnect");
-
 if(!isset($_REQUEST['action']))
     $action = 'accueil';
 else
@@ -13,20 +11,25 @@ switch($action)
 {
     case 'accueil':
         include("vues/v_accueil.php");
-        break;
-    
-    case 'catalogue':
-        include("vues/v_catalogue.php");
-        break;
-    
-    case 'reservation':
-        include("vues/v_reservation.php");
-        break;
+    break;
     
     case 'voirVols' :
+        include "modele/fonctions.php";
         $lesVols = getLesVols();
+        //var_dump($lesVols[0]);
         include("vues/v_vols.php");
-        break;
+    break;
+    
+    case 'reservation':
+        include "modele/fonctions.php";
+        $lesReservations = getLesReservations();
+        //var_dump($lesReservations[0]);
+        include("vues/v_reservation.php");
+    break;
+    
+    case 'formulaireReservation':
+        include("vues/v_formulaireReservation.php");
+    break;
 }
 
 // vue qui crée le pied de page
