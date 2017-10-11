@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 11 Octobre 2017 à 09:21
+-- Généré le :  Mer 11 Octobre 2017 à 14:14
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -58,7 +58,8 @@ CREATE TABLE `reserver` (
 
 INSERT INTO `reserver` (`idvol`, `idutil`, `nbplace`) VALUES
 ('AIR5007', 1, 3),
-('AIR5108', 2, 7);
+('AIR5108', 2, 7),
+('AIR5007', 9, 3);
 
 -- --------------------------------------------------------
 
@@ -82,7 +83,8 @@ CREATE TABLE `utilisateur` (
 
 INSERT INTO `utilisateur` (`numutil`, `nom`, `prenom`, `email`, `adress`, `ville`, `cp`) VALUES
 (1, 'Bost', 'Anne', 'bost.anne@gmail.com', '15 rue de pavillon', 'Le Blanc-Mesnil', '93150'),
-(2, 'Marguet', 'Céline', 'marguet.celine@gmail.com', '230 avenue Jean Jaurès', 'Drancy', '93700');
+(2, 'Marguet', 'Céline', 'marguet.celine@gmail.com', '230 avenue Jean Jaurès', 'Drancy', '93700'),
+(9, 'Kent', 'Jonathan', 'jonathan.kent@gmail.com', '79 rue des compagnes', 'Smallville', '54320');
 
 -- --------------------------------------------------------
 
@@ -146,7 +148,7 @@ ALTER TABLE `vol`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `numutil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `numutil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
